@@ -1,0 +1,29 @@
+"CallerReference": "static-site-2026-v1"
+"Comment" : "Static site Distribution"
+"Enable" : true
+"DefaultRootOBject" : "index.html"
+"Origins": {
+	"Quantity" : 1,
+	"Items" : [{
+  		"Id": "S3-website-origin",
+  		"DomainName": "kosha-static-site-2026.s3-website-us-east-1.amazonaws.com",
+  		"CustomOriginConfig": {
+			"HTTPPort":80,
+			"HTTPSPort" 443,
+			"OriginProtocolPolicy": "http-only",
+			"OriginSslProtocols": {
+				"Quantity" : 1
+				"Items" : [
+				"TLSv1.2"
+				]
+			
+
+	
+		}
+
+
+ 	  
+  }]
+}
+
+

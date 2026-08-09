@@ -1,0 +1,55 @@
+{
+  "CallerReference": "static-site-2026-v1",
+  "Comment": "Static Site Distribution",
+  "Enabled": true,
+  "PriceClass": "PriceClass_100",
+  "DefaultRootObject": "index.html",
+
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-website-origin",
+        "DomainName": "koshagohil-static-site-2026.s3-website-us-east-1.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only",
+          "OriginSslProtocols": {
+            "Quantity": 1,
+            "Items": [
+              "TLSv1.2"
+            ]
+          }
+        }
+      }
+    ]
+  },
+
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-website-origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": [
+        "GET",
+        "HEAD"
+      ],
+      "CachedMethods": {
+        "Quantity": 2,
+        "Items": [
+          "GET",
+          "HEAD"
+        ]
+      }
+    },
+
+    "Compress": true,
+    "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6"
+  },
+
+  "ViewerCertificate": {
+    "CloudFrontDefaultCertificate": true
+  }
+}
