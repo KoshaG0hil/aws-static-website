@@ -21,7 +21,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::540883425332:role/GitHubActionsStaticWebsiteDeploymentRole
-aws-region: us-east-1
+          aws-region: us-east-1
       - name: Deploy website to S3
         run: |
           aws s3 sync . s3://koshagohil-static-site-2026  \
