@@ -1,0 +1,9 @@
+{
+  "DistributionId": "EM66AJ7S4IXFZ",
+  "DomainName": "d2i6b8biog77wq.cloudfront.net",
+  "Origin": "koshagohil-static-site-2026.s3-website-us-east-1.amazonaws.com",
+  "ViewerProtocolPolicy": "redirect-to-https",
+  "DefaultRootObject": "index.html",
+  "PriceClass": "PriceClass_100",
+  "HttpVersion": "http2"
+}
